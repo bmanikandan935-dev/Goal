@@ -1,0 +1,310 @@
+.goalCalculator {
+  max-width: 920px;
+  margin: 24px auto;
+  border-radius: 20px;
+  box-shadow: 0 14px 32px rgba(29, 45, 68, 0.15);
+  background: linear-gradient(145deg, #fdfcfe 0%, #eef3ff 100%);
+  border: 1px solid rgba(109, 127, 183, 0.14);
+  overflow: hidden;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.dark {
+  background: linear-gradient(140deg, #16213a 0%, #1b1f38 100%);
+  border-color: rgba(56, 86, 172, 0.38);
+  box-shadow: 0 14px 32px rgba(3, 5, 16, 0.42);
+}
+
+.dark .goalHeader {
+  background: linear-gradient(180deg, rgba(37, 57, 106, 0.25), rgba(19, 23, 45, 0.35));
+  border-bottom-color: rgba(62, 82, 131, 0.4);
+}
+
+.dark .goalHeader h2,
+.dark .field label,
+.dark .statusBox strong,
+.dark .statusBox span,
+.dark .copyStatus,
+.dark .toggleGroup label {
+  color: #f0f3ff;
+}
+
+.dark .field input,
+.dark .field select,
+.dark .monthItem,
+.dark .validationBox,
+.dark .chartWrapper {
+  background: #1f243f;
+  border-color: rgba(97, 121, 179, 0.5);
+  color: #e5ecff;
+}
+
+.dark .statusBox,
+.dark .progressBarFrame {
+  background: rgba(46, 58, 92, 0.6);
+  border-color: rgba(110, 125, 167, 0.4);
+}
+
+.dark .progressBarFill {
+  background: linear-gradient(90deg, #3d8afd, #586cff);
+}
+
+.dark .monthItem {
+  border: 1px solid rgba(71, 101, 152, 0.35);
+}
+
+.dark .chartEmpty {
+  color: #bdcadf;
+}
+
+.goalHeader {
+  padding: 22px 26px 16px;
+  background: linear-gradient(180deg, rgba(64, 114, 226, 0.15), rgba(220, 237, 255, 0.1));
+  border-bottom: 1px solid rgba(109, 127, 183, 0.2);
+}
+
+.goalHeader h2 {
+  margin: 0;
+  color: #1f3278;
+  font-size: 1.5rem;
+}
+
+.goalForm {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  color: #304b8c;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.field input,
+.field select {
+  border: 1px solid rgba(88, 111, 170, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #fbfdff;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #3b7df5;
+  box-shadow: 0 0 0 3px rgba(96, 138, 254, 0.2);
+}
+
+.timeline {
+  padding: 18px 22px 22px;
+  border-top: 1px solid rgba(109, 127, 183, 0.2);
+}
+
+.resultCard {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.statusBox {
+  min-width: 160px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(92, 133, 255, 0.30);
+  background: rgba(240, 246, 255, 0.8);
+}
+
+.statusBox strong {
+  display: block;
+  color: #1b2f6e;
+  font-size: 1.4rem;
+}
+
+.statusBox span {
+  color: #445f9a;
+  font-size: 0.86rem;
+}
+
+.progressBarFrame {
+  margin-top: 8px;
+  border-radius: 9px;
+  background: #e7ecff;
+  height: 16px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #5061fe, #8da3ff);
+  transition: width 0.35s ease;
+}
+
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.toggleGroup {
+  display: inline-flex;
+  gap: 8px;
+  background: rgba(107, 130, 231, 0.16);
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(120, 149, 232, 0.4);
+  font-size: 0.87rem;
+}
+
+.toggleGroup label {
+  cursor: pointer;
+  color: #1a2e6d;
+}
+
+.toggleGroup input {
+  margin-right: 4px;
+}
+
+.themeGroup {
+  display: inline-flex;
+  align-items: center;
+}
+
+.themeButton {
+  border: 1px solid rgba(126, 147, 203, 0.45);
+  background: #f0f4ff;
+  color: #1b357d;
+  border-radius: 10px;
+  padding: 7px 11px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.themeButton:hover {
+  transform: translateY(-1px);
+  background: #e4ecff;
+}
+
+.dark .themeButton {
+  background: #2a304f;
+  color: #d7e1ff;
+  border-color: rgba(118, 136, 170, 0.7);
+}
+
+.dark .themeButton:hover {
+  background: #3b4768;
+}
+
+.shareButton {
+  border: none;
+  border-radius: 10px;
+  padding: 9px 14px;
+  color: white;
+  background: linear-gradient(90deg, #0f7efb, #2fabea);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.shareButton:disabled {
+  background: #9db2db;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.shareButton:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(34, 110, 236, 0.25);
+}
+
+.copyStatus {
+  margin-left: 12px;
+  color: #3b4f8d;
+  font-size: 0.9rem;
+}
+
+.validationBox {
+  padding: 12px 14px;
+  margin: 0 22px 5px;
+  background: rgba(254, 229, 229, 0.8);
+  border: 1px solid rgba(224, 92, 92, 0.4);
+  border-radius: 10px;
+  color: #8a0b0b;
+}
+
+.chartWrapper {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid rgba(106, 123, 181, 0.25);
+  border-radius: 12px;
+  background: #fafcff;
+}
+
+.chartEmpty {
+  padding: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5f6a96;
+}
+
+.monthList {
+  display: grid;
+  gap: 8px;
+  max-height: 240px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.monthItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.87rem;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(123, 160, 228, 0.3);
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: #254b99;
+  background: rgba(97, 148, 233, 0.15);
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .goalForm {
+    grid-template-columns: 1fr;
+  }
+
+  .resultCard {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .goalCalculator {
+    border-radius: 14px;
+    margin: 12px;
+  }
+
+  .goalHeader h2 {
+    font-size: 1.25rem;
+  }
+}
